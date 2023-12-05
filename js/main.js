@@ -33,8 +33,8 @@ const slideshow_Text = document.getElementById("slideshow-text");
 let prev_btn = document.querySelector(".prev");
 let next_btn = document.querySelector(".next");
 
-let currentImgIndex = 0;
-const totalImgs = images.length;
+let currentImagesIndex = 0;
+const totalImages = images.length;
 
 const showImage = (index) => {
   const { image, title, text } = images[index];
@@ -46,13 +46,13 @@ const showImage = (index) => {
 };
 
 prev_btn.addEventListener("click", () => {
-  currentImgIndex = (currentImgIndex - 1 + totalImgs) % totalImgs;
-  showImage(currentImgIndex);
+  currentImagesIndex = (currentImagesIndex - 1 + totalImages) % totalImages;
+  showImage(currentImagesIndex);
 });
 
 next_btn.addEventListener("click", () => {
-  currentImgIndex = (currentImgIndex + 1) % totalImgs;
-  showImage(currentImgIndex);
+  currentImagesIndex = (currentImagesIndex + 1) % totalImages;
+  showImage(currentImagesIndex);
 });
 
 
